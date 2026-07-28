@@ -7,8 +7,20 @@
     <meta name="theme-color" content="#101a45" />
     <meta name="description" content="Monitoramento de rupturas de estoque das lojas Roque — Forquilha, Angelim e Santa Inês." />
     <title>Rupturas Roque</title>
-    <script type="module" crossorigin src="/assets/index-B1z1AE00.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-x5B3d1BU.css">
+
+    <!-- Conexão com o Supabase -->
+    <script type="module">
+      import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+      window.supabase = createClient(
+        'https://mdkvlzmagnnexdjtudnc.supabase.co',
+        'sb_publishable_DFA0qUKlH46zJAndW18qxA_4Zz_h2FQ'
+      );
+      console.log("Supabase inicializado com sucesso!");
+    </script>
+
+    <!-- Arquivos do seu aplicativo -->
+    <script type="module" crossorigin src="index-B1z1AE00.js"></script>
+    <link rel="stylesheet" crossorigin href="index-x5B3d1BU.css">
   </head>
   <body>
     <div id="root"></div>
